@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>CSE 494 - Spring 2022 - Homework #4</title>
+  <link rel='stylesheet' href='css/styles.css'>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />  -->
+  <script src='https://d3js.org/d3.v5.min.js'></script>
+  <script src='main.js'></script>
+</head>
+
+<body>
+  <div id='wrapper'>
+    <h1>Global Developments 1980-2013</h1>
+
+    <!-- <div class="row"></div> -->
+    &nbsp;Year:&nbsp;
+    <input id='year-input' type='number' value='1980' min='1980' max='2013' onchange='drawBackground();' />
+    &nbsp;&nbsp;
+
+    <input type='button' id="playbutton" value="Play" onclick="playButton()">
+    <input type='button' id="resetbutton" value="Reset" onclick="resetButton()">
+
+    <div id="slider-wrapper">
+      <div id="date-slider"></div>
+    </div>
+
+    <br />
+    <br />
+    <!-- Y -->
+    &nbsp;Y Attribute:&nbsp;
+    <select id='attribute-select-y' onchange='drawBackground();'>
+      <option value='Data.Health.Life Expectancy at Birth, Total'>Life Expectancy</option>
+      <option value='Data.Health.Fertility Rate'>Fertility Rate</option>
+      <option value='Data.Infrastructure.Mobile Cellular Subscriptions per 100 People'>Mobile Subscriptions</option>
+      <option value='Data.Health.Death Rate'>Death Rate</option>
+      <option value='Data.Health.Birth Rate'>Birth Rate</option>
+      <option value='Data.Urban Development.Urban Population Percent'>Urban Population</option> 
+    </select>
+    <!-- X -->
+    &nbsp;X Attribute:&nbsp;
+    <select id='attribute-select-x' onchange='drawBackground();'>
+      <!-- <option value='Data.Infrastructure.Mobile Cellular Subscriptions'>Mobile Subscriptions</option> -->
+      <option value='Data.Urban Development.Urban Population Percent'>Urban Population</option> 
+      <option value='Data.Infrastructure.Mobile Cellular Subscriptions per 100 People'>Mobile Subscriptions</option>
+      <option value='Data.Rural Development.Rural Population'>Rural Population</option>
+      <option value='Data.Health.Death Rate'>Death Rate</option>
+      <option value='Data.Health.Birth Rate'>Birth Rate</option>
+      <option value='Data.Health.Life Expectancy at Birth, Total'>Life Expectancy</option>
+      <option value='Data.Health.Fertility Rate'>Fertility Rate</option>
+    </select>
+    &nbsp;Size Attribute:&nbsp;
+    <select id='attribute-select-s' onchange='drawBackground();'>
+      <option value='Data.Health.Total Population'>Population</option>
+      <option value='Data.Rural Development.Rural Population'>Rural Population</option>
+      <option value='Data.Urban Development.Urban Population Percent'>Urban Population</option> 
+      <option value='Data.Health.Death Rate'>Death Rate</option>
+      <option value='Data.Health.Birth Rate'>Birth Rate</option>
+      <option value='Data.Health.Fertility Rate'>Fertility Rate</option>
+      
+    </select>
+    <br />
+    <br />
+
+    <div class="grid">
+      <div class="grid-item">
+        <svg id='chart'> 
+          <svg id='background'></svg> 
+        </svg>
+        <!-- <svg id='background'> 
+          <svg id='chart'></svg> 
+        </svg>
+         -->
+      </div>
+      <div class="grid-item">
+        <br />
+        <div id="regionboxes">
+          <fieldset>
+            <legend>Regions</legend>
+            <input type="checkbox" onclick='toggle(this);'>Select/Deselect All<br/>
+            <input type="checkbox" name="region" id="northamerica" onclick='box_toggle(this);' value="North America">North America<br>
+            <input type="checkbox" name="region" id="southasia" onclick='box_toggle(this);' value="South Asia">South Asia<br>
+            <input type="checkbox" name="region" id="eastasia" onclick='box_toggle(this);' value="East Asia & Pacific">East Asia & Pacific<br>
+            <input type="checkbox" name="region" id="subafrica" onclick='box_toggle(this);' value="Sub-Saharan Africa">Sub-Saharan Africa<br>
+            <input type="checkbox" name="region" id="europe" onclick='box_toggle(this);' value="Europe & Central Asia">Europe & Central Asia<br>
+            <input type="checkbox" name="region" id="mideast" onclick='box_toggle(this);' value="Middle East & North Africa">Middle East & North Africa<br>
+            <input type="checkbox" name="region" id="latinamerica" onclick='box_toggle(this);' value="Latin America & Caribbean">Latin America & Caribbean<br>
+            
+          </fieldset>
+        </div>
+        
+
+      </div>
+    </div>
+
+
+
+  </div>
+  <br />
+
+
+  <!-- <svg id='linechart'></svg> -->
+  </div>
+</body>
+
+
+
+</html>

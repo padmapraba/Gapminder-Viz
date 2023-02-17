@@ -1,0 +1,90 @@
+  #wrapper {
+    margin:auto;
+    width:1440px;
+  }
+  input {
+    width:50px;
+  }
+  /* svg {
+    border:1px solid gray;
+    border-radius:10px;
+    height:720px;
+    width:1080px;
+    margin:5px;
+  } */
+  #chart{
+    border:1px solid gray;
+    border-radius:10px;
+    height:720px;
+    width:1080px;
+    margin:5px;
+  }
+  #background {
+    border:1px solid gray;
+    border-radius:10px;
+    height:720px;
+    width:1080px;
+    margin:5px;
+  }
+/*   
+  #linechart {
+    width:800px;
+  } */
+  
+  html {
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  
+  h2, h3 {
+    text-align:center;
+  }
+  .x_axis line, .x_axis .domain {
+    stroke:gray;
+  }
+  .axisLabel, .legendLabel {
+    font-size:20px;
+    fill:gray;
+  }
+  
+  .y_axis line {
+    stroke:gray;
+    /* stroke-opacity: 0.5; */
+    /* stroke-dasharray: 5,10; */
+  }
+  .y_axis text, .x_axis text {
+    fill:gray;
+    font-size:1.5em;
+  }
+  
+  /* #tooltip {
+    border:1px solid gray;
+    border-radius:5px;
+    background-color: white;
+    position:absolute;
+    padding:10px;
+  } */
+  
+  /* #slider-wrapper {
+    display: inline-block;
+    width: 50%;
+    margin: -3px 10px;
+  } */
+
+.grid {
+    /* background-color: lightgray; */
+    display: grid;
+    /* padding: 20px; */
+    grid-column-gap: 20px;
+    /* grid-row-gap: 0px; */
+    grid-template-columns: auto 25%;
+}
+.grid-item {
+    border:1px solid rgb(255, 255, 255);
+    background-color: white;
+    font-size: 18px;
+    padding: auto;
+    text-align: left;
+}
+
+  
